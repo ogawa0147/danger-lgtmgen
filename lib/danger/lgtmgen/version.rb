@@ -1,5 +1,5 @@
 module Danger
-  module Lgtmoon
+  module Lgtmgen
     VERSION = "0.1.0"
   end
 end

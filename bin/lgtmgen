@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+# bundle exec bin/lgtmgen
+
+require "danger/lgtmgen"
+
+# lgtmgen = Danger::DangerLgtmgen.new
+# puts lgtmgen.github_markdown
+
+lgtmgen = Danger::DangerLgtmgen.new(url_type: Danger::URLType::LGTMOON)
+puts lgtmgen.github_markdown

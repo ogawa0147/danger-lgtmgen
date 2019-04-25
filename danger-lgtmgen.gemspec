@@ -1,17 +1,17 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "danger/lgtmoon/version"
+require "danger/lgtmgen/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "danger-lgtmoon"
-  spec.version       = Danger::Lgtmoon::VERSION
+  spec.name          = "danger-lgtmgen"
+  spec.version       = Danger::Lgtmgen::VERSION
   spec.authors       = ["ogawa0147"]
   spec.email         = [""]
 
-  spec.summary       = %q{Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{Write a longer description or delete this line.}
-  spec.homepage      = "https://github.com/ogawa0147/danger-lgtmoon"
+  spec.summary       = %q{Random LGTM.}
+  spec.description   = %q{Random LGTM .}
+  spec.homepage      = "https://github.com/ogawa0147/danger-lgtmgen"
   spec.license       = "MIT"
 
   # Specify which files should be added to the gem when it is released.
@@ -23,7 +23,11 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
+  spec.add_runtime_dependency 'danger-plugin-api', '~> 1.0'
+
   spec.add_development_dependency "bundler", "~> 1.17"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
+
+  spec.add_development_dependency "faraday", "~> 0.15.4"
 end
