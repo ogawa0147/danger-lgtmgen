@@ -42,7 +42,7 @@ module Danger
         image_id = rand(20000)
         conn = Faraday::Connection.new(:url => BASE_URL) do |builder|
           builder.use Faraday::Request::UrlEncoded
-          builder.use Faraday::Response::Logger
+          # builder.use Faraday::Response::Logger
           builder.use Faraday::Adapter::NetHttp
         end
         response = conn.get "images/#{image_id}" do |req|
@@ -63,14 +63,13 @@ module Danger
     end
 
     def html_tag
-      base_url = "https://lgtmoon.herokuapp.com/"
       try = 0
       begin
         try += 1
         image_id = rand(20000)
         conn = Faraday::Connection.new(:url => BASE_URL) do |builder|
           builder.use Faraday::Request::UrlEncoded
-          builder.use Faraday::Response::Logger
+          # builder.use Faraday::Response::Logger
           builder.use Faraday::Adapter::NetHttp
         end
         response = conn.get "images/#{image_id}" do |req|
