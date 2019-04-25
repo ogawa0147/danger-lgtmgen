@@ -7,8 +7,8 @@ module Danger
     LGTMOON = 1
   end
 
-  class DangerLgtmgen
-  # class DangerLgtmgen < Plugin
+  # class DangerLgtmgen
+  class DangerLgtmgen < Plugin
 
     def initialize(url_type)
       @url_type = url_type
@@ -29,7 +29,6 @@ module Danger
     end
   end
 
-  # class DangerLgtmgen < Plugin
   class Lgtmmoon
     require "faraday"
 
